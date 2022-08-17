@@ -1,0 +1,210 @@
+.profile {
+  padding: 4rem 0;
+}
+.profile .content__text {
+  font-size: 1.4rem;
+}
+
+.mypagePage {
+  /*
+  .recommend,
+  .apply {
+    padding: 2.5rem 0;
+  }
+  */
+}
+.mypagePage .content__item {
+  border-bottom: 1px solid #161615;
+}
+.mypagePage .content__subitem {
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #161615;
+}
+.mypagePage .content__subitem:last-child {
+  border: none;
+}
+.mypagePage .content__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.mypagePage .content__link .num {
+  font-weight: 600;
+}
+
+.memberPage .content {
+  border-top: 1px solid #161615;
+  border-bottom: 1px solid #161615;
+}
+.memberPage .content__layout {
+  display: flex;
+  align-items: center;
+  height: 8rem;
+  border-bottom: 1px solid #161615;
+}
+.memberPage .content__layout:last-child {
+  border: none;
+}
+.memberPage .content__subtitle {
+  font-size: 1.4rem;
+  padding: 0 0 0.5rem 0;
+}
+.memberPage .content__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.memberPage .content__link {
+  line-height: 8rem;
+  width: 100%;
+}
+.memberPage .content .btn-moving {
+  margin: 0;
+}
+
+.accountPage {
+  padding: 0 0 8rem 0;
+}
+.accountPage .content__form {
+  position: relative;
+}
+.accountPage .content__form:first-child {
+  margin: 0 0 5rem 0;
+}
+.accountPage .content__select {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #777;
+  background-color: #fff;
+  cursor: pointer;
+}
+.accountPage .content__select.on {
+  color: #161615;
+}
+.accountPage .content__selecticon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  right: 1rem;
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url(/images/icon/icon-chevron-full-arrow-down-min-g.png) no-repeat;
+  background-size: contain;
+}
+
+.deleteAcc {
+  padding: 0 0 19rem 0;
+}
+.deleteAcc .content {
+  padding: 7rem 0;
+}
+.deleteAcc .content__delete {
+  padding: 2rem;
+  border: 1px solid #161615;
+}
+.deleteAcc .content__delete:first-child {
+  border-top: 3px solid #161615;
+}
+.deleteAcc .content__subitem {
+  margin: 1rem 0;
+  padding: 0 0 0 1.5rem;
+  font-size: 1.4rem;
+}
+.deleteAcc .content__subitem li {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+  list-style: disc;
+}
+.deleteAcc .content__item {
+  margin: 0 0 2rem 0;
+}
+.deleteAcc .content__item:last-child {
+  margin: 0;
+}
+.deleteAcc .content__subtitle {
+  font-size: 1.6rem;
+}
+.deleteAcc .content__label {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+
+.service .content {
+  border-top: 1px solid #161615;
+  border-bottom: 1px solid #161615;
+}
+.service .content__layout {
+  border-bottom: 1px solid #161615;
+}
+.service .content__layout:last-child {
+  border: none;
+}
+.service .content__link {
+  padding: 1.5rem 2rem;
+}
+
+.notice .content__layout {
+  padding: 2rem 0;
+  border-bottom: 1px solid #161615;
+}
+.notice .content__layout:first-child {
+  border-top: 3px solid #161615;
+}
+.notice .content__linktext {
+  display: -webkit-box;
+  line-height: 1.3;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  max-height: 2.6em;
+  -webkit-line-clamp: 2;
+  margin: 0 0 1rem 0;
+}
+.notice .content__linkdate {
+  font-size: 1.3rem;
+}
+
+.noticePage .content__head {
+  padding: 2rem 0;
+}
+.noticePage .content__title {
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
+}
+.noticePage .content__date {
+  font-size: 1.3rem;
+}
+.noticePage .content__body {
+  padding: 3rem 0;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+}
+.noticePage .content__text {
+  font-size: 1.6rem;
+}
+
+.faq .content-head {
+  text-align: center;
+  padding: 1.5rem 2rem;
+  font-weight: 500;
+  background: #161615;
+  color: #fff;
+}
+.faq .content__layout {
+  border-bottom: 1px solid #161615;
+}
+.faq .content__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1.5rem;
+}

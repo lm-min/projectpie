@@ -1,0 +1,261 @@
+@charset "UTF-8";
+.mainPage .content__layout.theme .stopwatch {
+  padding: 1.5rem 0;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.mainPage .content__layout.theme .stopwatch img {
+  width: auto;
+  height: 22px;
+}
+.mainPage .content__layout.theme .banner {
+  border-top: 1px solid #161615;
+  border-bottom: 1px solid #161615;
+}
+.mainPage .content__layout.theme-intro .project-date {
+  border-top: 1px solid #161615;
+  border-bottom: 1px solid #161615;
+  margin: 2.5rem 0;
+  padding: 1.5rem 0;
+  font-weight: 500;
+}
+.mainPage .content__layout.upcoming {
+  position: relative;
+}
+.mainPage .content__maintitle {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  color: #fff;
+  font-size: 5rem;
+  z-index: 1;
+}
+.mainPage .content__title {
+  padding: 2rem 0;
+}
+.mainPage .content__textbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: #fff;
+}
+.mainPage .content__linkimg {
+  position: relative;
+  height: 24rem;
+  border-bottom: 2px solid #161615;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.mainPage .content__linkimg.projec-banner {
+  background-image: url("/images/art/CrossCultureDesign1440_x_1728__2x.png");
+}
+.mainPage .content__linkimg.artist01 {
+  background-image: url("/images/people/mike-von-iCanjgDercM-unsplash.jpg");
+}
+.mainPage .content__linkimg.artist02 {
+  background-image: url("/images/people/tron-le-MEsOFGCccHg-unsplash.jpg");
+}
+.mainPage .content__linktext {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.mainPage .content__linktext span {
+  padding: 0 0.5rem;
+}
+.mainPage .content__linktext span + span {
+  position: relative;
+}
+.mainPage .content__linktext span + span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  left: 0;
+  display: block;
+  width: 0.1rem;
+  height: 1.1rem;
+  background-color: #fff;
+}
+.mainPage .content__linkicon path {
+  fill: #fff;
+}
+.mainPage .lineup {
+  padding-bottom: 4rem;
+}
+.mainPage .lineup__list {
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #161615;
+}
+.mainPage .lineup__item {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #eaeaea;
+  list-style: auto;
+}
+.mainPage .lineup__item:last-child {
+  border: none;
+}
+.mainPage .lineup__item li {
+  margin: 0 0 0 2rem;
+  padding: 0.5rem 0 0.5rem 1rem;
+}
+.mainPage .lineup__title {
+  position: relative;
+  padding: 0.5rem 5rem 0.5rem 1rem !important;
+  font-size: 1.8rem;
+  font-weight: 600;
+  word-break: keep-all;
+}
+.mainPage .lineup__title::before {
+  content: "최원서";
+  position: absolute;
+  right: 0;
+  color: #999;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.mainPage .lineup__text {
+  list-style: disc;
+}
+.mainPage .lineup__text::marker {
+  font-size: 1rem;
+}
+.mainPage .lineup__slide .swiper-slide {
+  width: 40rem;
+  height: 45rem;
+  margin: 0 15px 0 0;
+  padding: 10px 15px;
+  background: url(/images/people/mike-von-iCanjgDercM-unsplash.jpg) no-repeat;
+  background-size: cover;
+}
+.mainPage .lineup__slide .swiper-slide:last-child {
+  margin: 0;
+}
+
+.pastPage .section01 {
+  padding: 2rem 0;
+}
+.pastPage .section01 .item {
+  margin: 0 0 5rem;
+}
+.pastPage .section01 .img-area {
+  position: relative;
+  height: 50rem;
+}
+.pastPage .section01 .img-area img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.pastPage .section01 .sub-title {
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+  color: #fff;
+}
+.pastPage .section01 .text-area {
+  padding: 1rem 0;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.aboutPage section {
+  padding: 3rem 0;
+}
+.aboutPage .content {
+  padding: 0;
+}
+.aboutPage .content__layout {
+  padding: 3rem 0;
+}
+.aboutPage .content__title {
+  padding: 0 0 7rem 0;
+}
+.aboutPage .content__item {
+  position: relative;
+  padding: 0 0 2rem 0;
+}
+.aboutPage .content__item:last-child {
+  padding: 0;
+}
+.aboutPage .content__imgbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 9rem;
+  height: 9rem;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.aboutPage .content__imgbox img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.aboutPage .content__textbox {
+  padding: 0 0 0 12rem;
+}
+.aboutPage .content .arrow {
+  position: relative;
+  padding: 0 0 0 2.3rem;
+  margin: 1rem 0;
+}
+.aboutPage .content .arrow::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  left: 0;
+  display: block;
+  width: 1.3rem;
+  height: 1.2rem;
+  background: url(/images/icon/icon-arrow-left-b.png) no-repeat;
+  background-size: contain;
+}
+.aboutPage .intro {
+  display: flex;
+  height: 80vh;
+  text-align: center;
+}
+.aboutPage .intro .inner {
+  margin: auto;
+  padding: 2rem 0;
+}
+.aboutPage .intro .img-area {
+  width: 20rem;
+  margin: 0 auto;
+}
+.aboutPage .intro .text-area .sub-title {
+  padding: 2rem 0;
+}
+.aboutPage .intro .text-area strong {
+  margin: 1rem 0;
+}
+.aboutPage .intro .text-area p {
+  margin: 0 2rem;
+  word-break: keep-all;
+}
+
+@media screen and (max-width: 479px) {
+  .mainPage .content__linkimg {
+    height: 20rem;
+  }
+  .mainPage .theme .time p {
+    font-size: 1.4rem;
+  }
+  .mainPage .main .item {
+    height: 20rem;
+  }
+}

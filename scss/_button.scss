@@ -1,0 +1,225 @@
+.btn-close {
+  width: 100%;
+  padding: 1.5rem 0;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 0.25rem;
+  background-color: $black;
+}
+
+.btn-menu {
+  position: relative;
+  display: block;
+  width: 5.5rem;
+  height: 5.4rem;
+  background-color: $gray2;
+  img {
+    width: 2.2rem;
+    transition: transform 0.2s ease;
+    transform: rotate(-45deg);
+  }
+  &.active {
+    img {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+/*
+.pageTop {
+  position: fixed;
+  right: 1.6rem;
+  bottom: 9rem;
+  width: 46px;
+  height: 46px;
+  background-color: $white;
+  border: 1px solid $gray2;
+  border-radius: 100%;
+  a {
+    height: 100%;
+    width: 100%;
+    background: url(/images/icon/icon-arrow-left-b.png) no-repeat;
+    background-size: 22px;
+    background-position: center;
+    transform: rotate(-90deg);
+  }
+}
+*/
+.aside-icons {
+  position: fixed;
+  right: 1.6rem;
+  bottom: 9rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  .aside-icon {
+    width: 46px;
+    height: 46px;
+    background-color: $white;
+    border: 1px solid $gray2;
+    border-radius: 100%;
+    margin-bottom: 1rem;
+    &:last-child {
+      margin: 0;
+    }
+    a {
+      height: 100%;
+      width: 100%;
+      background-image: url(/images/icon/icon-link-b.png);
+      background-repeat: no-repeat;
+      background-size: 22px;
+      background-position: center;
+    }
+  }
+  .pageTop {
+    a {
+      transform: rotate(-90deg);
+      background-image: url(/images/icon/icon-arrow-left-b.png);
+    }
+  }
+  .link {
+    a {
+      background-position: 10px center;
+    }
+  }
+}
+
+.btn-moving {
+  position: relative;
+  display: inline-block !important;
+  margin: 1.3rem 0 0 0;
+  font-size: 1.4rem;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.1rem;
+    width: 100%;
+    height: 0.1rem;
+    background-color: $black2;
+  }
+  p {
+    display: inline-block;
+    padding: 0 0.5rem 0 0;
+  }
+  svg {
+    margin-bottom: -0.2rem;
+  }
+}
+.btn-do {
+  @include pos-fixed(bottom);
+  width: 100%;
+  max-width: 500px;
+  height: 7rem;
+  line-height: 7rem;
+  color: $white;
+  font-weight: 700;
+  text-align: center;
+  background-color: $black;
+  z-index: 999;
+  &.btn-delete {
+    bottom: 7rem;
+    background-color: $black2;
+  }
+}
+.btn-back {
+  display: flex;
+  align-items: center;
+  padding: 3rem 0 8rem 0;
+  // padding: 5rem 0;
+  .arrow {
+    height: 2.3rem;
+    svg {
+      width: 1.7rem;
+      height: 2.3rem;
+    }
+  }
+}
+.btn-more {
+  text-align: right;
+  margin-top: 1rem;
+  span {
+    color: #999;
+    font-size: 1.3rem;
+    text-decoration: underline;
+  }
+}
+.list-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  a {
+    width: 11rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    padding: 0 1.5rem;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    border-radius: 2.5rem;
+    background-color: $black;
+    color: $white;
+  }
+}
+/*
+.btn-bell {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid $gray;
+  border-radius: 100%;
+  background-color: $white;
+  cursor: pointer;
+  .icon {
+    display: block;
+    width: 3.5rem;
+    height: 4rem;
+    margin: 0 auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("/images/icon/icon-bell-b.png");
+    &.on {
+      background-image: url("/images/icon/icon-bell-r.png");
+    }
+  }
+}
+.btn-back {
+  font-size: 2.4rem;
+}
+.btn-control {
+  width: 100%;
+  height: 4.2rem;
+  line-height: 2rem;
+  margin: 0 0 0 10px;
+  padding: 0.3rem 0.5rem;
+  color: $gray3;
+  font-size: 1.3rem;
+  background-color: $white;
+  border: 0.1rem solid $gray;
+  border-radius: 0.4rem;
+  white-space: nowrap;
+  cursor: pointer;
+  &:disabled {
+    color: $gray;
+    background-color: $gray3;
+    border: 0.1rem solid $gray3;
+    color: $gray2;
+    background-color: $white2;
+    border: 0.1rem solid $white2;
+    cursor: auto;
+  }
+}*/
+
+@media screen and (min-width: 500px) {
+  .aside-icons {
+    right: calc((100% - 500px) / 2 + 16px);
+  }
+  // .pageTop {
+  //   right: calc((100% - 500px) / 2 + 16px);
+  // }
+}

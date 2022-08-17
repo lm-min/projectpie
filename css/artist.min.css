@@ -1,0 +1,320 @@
+/*
+section {
+  padding: 3rem 0;
+  &:first-child {
+    padding: 0;
+  }
+}
+.intro {
+  &__list {
+    display: flex;
+  }
+  &__item {
+    flex: 1;
+    p {
+      padding: 0 0 0.5rem 0;
+      font-size: 1.4rem;
+    }
+  }
+}
+.info {
+  border-top: 1px solid $black;
+  border-bottom: 1px solid $black;
+  &__item {
+    display: flex;
+    padding: 0.5rem 0;
+    strong {
+      flex: 1;
+    }
+    span {
+      flex: 2;
+    }
+  }
+}
+.story {
+  &__text {
+    padding: 3rem 0;
+  }
+  .item-box {
+    border: 1px solid $black;
+  }
+}
+.fresh {
+  .text-area {
+    p {
+      padding: 1rem 0;
+    }
+  }
+}
+*/
+section {
+  padding: 3rem 0;
+}
+
+.mypie {
+  height: 20rem;
+  padding: 3rem 0 5rem 0;
+  background-color: #fff;
+}
+.mypie .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.mypie__list {
+  position: relative;
+  display: flex;
+  padding: 2rem 0;
+  margin: 0 0 1.5rem 0;
+}
+.mypie__list::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #c4c4c4;
+}
+.mypie__item {
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+.mypie__item span {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  bottom: -3.5rem;
+  width: 100%;
+  color: #c4c4c4;
+  font-size: 1.4rem;
+}
+.mypie__item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  background-color: #c4c4c4;
+}
+.mypie__item.active span {
+  color: #161615;
+}
+.mypie__item.active::before {
+  background-color: #161615;
+}
+.mypie .text-date {
+  padding: 0.5rem 0 1.5rem;
+  font-size: 1.4rem;
+}
+
+.intro__list {
+  display: flex;
+}
+.intro__item {
+  flex: 1;
+}
+.intro__item p {
+  padding: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+}
+
+.info {
+  border-top: 1px solid #161615;
+  border-bottom: 1px solid #161615;
+}
+.info__item {
+  display: flex;
+  padding: 0.5rem 0;
+}
+.info__item strong {
+  flex: 1;
+}
+.info__item span {
+  flex: 2;
+}
+
+.content__layout {
+  padding: 3rem 0;
+}
+.content__layout.letter .content__textbox {
+  display: inline-block;
+  color: #161615;
+  letter-spacing: -0.5px;
+  display: block;
+  line-height: 30px;
+  font-size: 1.5rem;
+  background: url(/images/sample/letter-bg.png) repeat;
+}
+.content__layout.letter .from {
+  position: relative;
+  padding-left: 9rem;
+}
+.content__layout.letter .from::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2.3rem;
+  width: 8rem;
+  height: 8rem;
+  background: url(/images/art/720_x_720__1x\ .png) no-repeat;
+  background-size: cover;
+  border-radius: 100%;
+}
+.content .item-box {
+  border: 1px solid #161615;
+}
+
+.product__text {
+  display: flex;
+}
+
+.moreArtists {
+  padding: 3rem 0 0;
+}
+.moreArtists .block {
+  width: 100%;
+}
+.moreArtists .block a {
+  display: flex;
+  flex-direction: column;
+}
+.moreArtists .block .img-area {
+  height: 100%;
+  overflow: hidden;
+}
+.moreArtists .block .text-area {
+  padding: 10px;
+  background-color: #fff;
+}
+
+.artSold .intro__price {
+  position: relative;
+  display: inline-block;
+}
+.artSold .intro__price p {
+  position: absolute;
+  right: -7rem;
+  top: 0.4rem;
+  padding: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.artSold .intro__receipt {
+  margin: 0.5rem 0 0 0;
+  color: #777;
+  font-size: 1.4rem;
+}
+.artSold .intro__receipt a {
+  display: inline-block;
+  border-bottom: 1px solid #777;
+}
+.artSold .banner .img-area {
+  position: relative;
+}
+.artSold .banner .sticker {
+  position: absolute;
+  right: 3rem;
+  bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 10rem;
+  border: 1px solid #161615;
+  border-radius: 100%;
+  background-color: #fff;
+}
+.artSold .info__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.artSold .info__item {
+  flex: 50%;
+  flex-direction: column;
+  padding: 0 0 2rem;
+}
+.artSold .info__item:nth-child(5), .artSold .info__item:nth-child(6) {
+  padding: 0;
+}
+.artSold .info strong {
+  font-weight: normal;
+}
+
+.swiper-container {
+  overflow: inherit;
+}
+.swiper-container .swiper-slide {
+  width: 25rem;
+  margin: 0 1.5rem 0 0;
+  cursor: pointer;
+}
+.swiper-container .swiper-slide:last-child {
+  margin: 0;
+}
+.swiper-container .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.modal__box {
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+}
+.modal__textbox {
+  padding: 1rem 0;
+  height: 50vh;
+}
+.modal__text {
+  text-align: left;
+  font-size: 15px;
+  overflow-y: scroll;
+  max-height: 25rem;
+  max-height: none;
+  height: 100%;
+}
+.modal__title {
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 500;
+  padding-bottom: 6px;
+}
+.modal__imgbox {
+  height: 20rem;
+}
+.modal__imgbox img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.modal button {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+@media screen and (max-width: 360px) {
+  .info {
+    border-top: 1px solid #161615;
+    border-bottom: 1px solid #161615;
+  }
+  .info__item {
+    flex-direction: column;
+  }
+}

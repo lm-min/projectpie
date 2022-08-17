@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hutu-Login</title>
+    <link rel="stylesheet" href="/css/xeicon.min.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/style.min.css" />
+    <link rel="stylesheet" href="/css/login.min.css" />
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/common.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="header header-alteration">
+        <div class="inner">
+          <a href="/views/index.html" class="btn-back"><i class="xi-angle-left"></i></a>
+          <p class="title">로그인</p>
+        </div>
+      </header>
+      <div class="container container-alteration login">
+        <section class="login-container">
+          <form action="" id="formLogin" id="loginForm" method="post" onsubmit="return frm-check();">
+            <input type="text" id="login-id" name="login-id" class="input-control" placeholder="아이디" maxlength="15" required />
+            <input type="password" id="login-pwd" name="login-pwd" value="" class="input-control" placeholder="비밀번호" maxlength="20" required="" />
+            <div class="btn-purple">
+              <button class="login-btn">로그인</button>
+            </div>
+            <div class="set-login">
+              <div class="check-box">
+                <input type="checkbox" class="save-id" name="checkId" id="saveId" />
+                <label for="saveId">아이디 저장</label>
+              </div>
+              <div class="account">
+                <a href="#">아이디 찾기</a>
+                <i>|</i>
+                <a href="#">비밀번호 찾기</a>
+                <i>|</i>
+                <a href="/views/signup.html">회원가입</a>
+              </div>
+            </div>
+          </form>
+        </section>
+        <section class="sub-login">
+          <p>더욱 간편한 로그인/회원가입</p>
+          <div class="btn-area">
+            <a href="/views/mypage/mypage.html" class="sns-btn kakao" role="button">Kakao 로그인</a>
+            <a href="#" class="sns-btn naver" role="button">Naver 로그인</a>
+            <a href="#" class="sns-btn google" role="button">Google 로그인</a>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+        $('.login-btn').on('click', function(){
+          let login-id = $('#login-id').val();
+          let login-pwd = $('#login-pwd').val();
+
+          if(login-id.length < 6){
+            alert('아이디를 입력해주세요.');
+          } else if (login-pwd == ''){
+            alert('비밀번호를 입력해주세요.');
+          }
+      });
+    </script>
+    <script type="text/javascript">
+      //아이디저장 쿠키
+      $(function() {
+        fnInit();
+      });
+
+      function frm-check(){
+        saveid();
+      }
+
+      function fnInit(){
+        var cookieid = getCookie("saveid");
+        if(cookieid !=""){
+          $("input:checkbox[id='saveId']").prop("checked", true);
+          $('#login-id').val(cookieid);
+        }
+      }
+
+      function setCookie(name, value, expiredays) {
+        var todayDate = new Date();
+        todayDate.setTime(todayDate.getTime() + 0);
+        if(todayDate > expiredays){
+            document.cookie = name + "=" + escape(value) + "; path=/; expires=" + expiredays + ";";
+        }else if(todayDate < expiredays){
+            todayDate.setDate(todayDate.getDate() + expiredays);
+            document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";";
+        }
+      }
+
+      function getCookie(Name) {
+        var search = Name + "=";
+
+        if (document.cookie.length > 0) { // 쿠키가 설정되어 있다면
+            offset = document.cookie.indexOf(search);
+            if (offset != -1) { // 쿠키가 존재하면
+                offset += search.length;
+                end = document.cookie.indexOf(";", offset);
+                // 쿠키 값의 마지막 위치 인덱스 번호 설정
+                if (end == -1)
+                  end = document.cookie.length;
+                return unescape(document.cookie.substring(offset, end));
+            }
+        }
+        return "";
+      }
+
+      function saveid() {
+        var expdate = new Date();
+        if ($("#saveId").is(":checked")){
+            expdate.setTime(expdate.getTime() + 1000 * 3600 * 24 * 30);
+            setCookie("saveid", $("#login-id").val(), expdate);
+            }else{
+            expdate.setTime(expdate.getTime() - 1000 * 3600 * 24 * 30);
+            setCookie("saveid", $("#login-id").val(), expdate);
+        }
+      }
+    </script>
+  </body>
+</html>

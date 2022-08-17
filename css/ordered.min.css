@@ -1,0 +1,15 @@
+.orderedPage .tab-menu {
+  border-top: none;
+  padding: 0;
+}
+.orderedPage .tab-menu__item {
+  flex: 1;
+  text-align: center;
+}
+.orderedPage .tab-menu__item.active {
+  background-color: #161615;
+  color: #fff;
+}
+.orderedPage .tab-menu__text {
+  padding: 1.5rem 1rem;
+}

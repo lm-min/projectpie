@@ -1,0 +1,320 @@
+@charset "utf-8";
+@import "_variables", "_mixin", "_utils", "_input", "_layout", "_button",
+  "_font";
+
+.tab-menu {
+  @include borders;
+  display: flex;
+  background-color: $white;
+  padding: 1rem;
+  &__item {
+    position: relative;
+    flex: 1;
+    text-align: center;
+    font-weight: 500;
+    cursor: pointer;
+    &.active {
+      // color:  $purple;
+      span {
+        position: relative;
+        &::before {
+          content: "";
+          @include pos-absolute(horizontal);
+          bottom: -0.2rem;
+          width: 100%;
+          height: 2px;
+          background-color: $black;
+          // background-color: $purple;
+        }
+      }
+    }
+  }
+}
+.tab-content {
+  background-color: $white;
+  &__item {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  &__subitem {
+    border-bottom: 1px solid $black;
+  }
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+  }
+  &__linktext {
+    flex: 1;
+    padding: 0 1rem 0 0;
+    > p {
+      padding: 0.3rem 0;
+    }
+    .present {
+      font-size: 1.4rem;
+    }
+    .situation {
+      color: $purple;
+      font-weight: 500;
+    }
+    .title {
+      @include ellipsis(two);
+      margin: 0.5rem 0;
+    }
+    .name {
+      font-size: 1.4rem;
+    }
+    .date {
+      font-size: 1.3rem;
+      font-weight: 300;
+    }
+  }
+  &__linkimg {
+    width: 11rem;
+    height: 11rem;
+    img {
+      @include images;
+    }
+  }
+}
+.banner {
+  .img-area {
+    width: 100%;
+    height: 60rem;
+  }
+  img {
+    @include images;
+  }
+}
+// text&btn
+h1 {
+  font-weight: bold;
+}
+h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+strong {
+  display: block;
+  font-weight: 600;
+}
+.subtitle {
+  font-size: 3.5rem;
+  padding: 0 0 7rem 0;
+}
+
+.border-top {
+  // border-top: 1px solid $black;
+  border-top: 1px solid $gray2;
+}
+.border-bottom {
+  // border-bottom: 1px solid $gray2;
+  border-bottom: 1px solid $black;
+}
+
+// input
+/*
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: 4rem;
+  padding: 0 1rem;
+  border-radius: 0.4rem;
+  border: 1px solid $gray;
+  background-color: $white;
+}
+.input-control {
+  min-width: 70px;
+  border: 1px solid #888;
+  border-radius: 0.4rem;
+  vertical-align: middle;
+}
+textarea {
+  font-size: 1.5rem;
+}
+.group {
+  display: flex;
+  align-items: center;
+  &.sms {
+    margin: 1rem 0 0 0;
+  }
+}
+.message {
+  margin: 0.7rem 0 0 0;
+  padding: 0 1rem;
+  color: red;
+  font-size: 1.3rem;
+}
+*/
+.input-style {
+  width: 100%;
+  padding: 0 0 1rem 0;
+  border-style: solid;
+  border-color: transparent transparent $black transparent;
+  border-width: 2px;
+}
+
+// 기타 클래스
+/*
+.badge {
+  padding: 0.3rem 1.3rem;
+  color: $black;
+  font-size: 1.3rem;
+  border-radius: 3rem;
+  background-color: $white;
+}
+.text-time {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4rem;
+  line-height: 4rem;
+  padding: 0 1rem;
+  text-align: right;
+  background-color: $transparen-gray;
+  color: $white;
+}
+.state {
+  min-width: 7rem;
+  padding: 0.3rem 1rem;
+  color: $purple;
+  text-align: center;
+  border: 1px solid $purple;
+  border-radius: 0.5rem;
+}
+.contCheck {
+  opacity: 0.7;
+  .tit {
+    font-weight: 400 !important;
+  }
+}
+*/
+.block {
+  // @include borders;
+  display: table;
+  border-collapse: collapse;
+  > li {
+    display: table-cell;
+    border: 2px solid $black;
+    a {
+      height: 25rem;
+    }
+    img {
+      @include images;
+    }
+  }
+}
+.item-box {
+  @include borders;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3.5rem 0;
+  }
+  p {
+    font-weight: 600;
+  }
+  img {
+    padding: 0 0 0 0.5rem;
+  }
+}
+.promise {
+  &__subtitle {
+    font-size: 3.5rem;
+    padding: 0 0 7rem 0;
+  }
+  &__item {
+    padding: 0 0 2.5rem 2.5rem;
+    strong {
+      position: relative;
+      &::before {
+        content: "";
+        @include pos-absolute(vertical);
+        left: -2.5rem;
+        display: block;
+        width: 17px;
+        height: 17px;
+        background: url(/images/icon/icon-check-circle.png) no-repeat center;
+        background-size: contain;
+      }
+    }
+    &:last-child {
+      padding: 0 0 0 2.5rem;
+    }
+  }
+}
+
+// popup(modal)
+#modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: $transparen-gray3;
+
+  max-width: 500px;
+  margin: 0 auto;
+}
+.modal {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 0.4s ease;
+  opacity: 0;
+  visibility: hidden;
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  &__box {
+    max-width: 400px;
+    height: auto;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 0.25rem;
+    background-color: $white;
+  }
+  &__text {
+    text-align: center;
+    padding: 0.5rem 0 2rem;
+  }
+}
+@media screen and (max-width: 479px) {
+  .banner {
+    .img-area {
+      height: auto;
+    }
+    img {
+      // object-fit: contain;
+    }
+  }
+}
+@media screen and (max-width: 390px) {
+  .subtitle {
+    font-size: 3.3rem;
+    padding: 0 0 5rem 0;
+  }
+  .mainPage {
+    .block {
+      > li {
+        height: 18rem;
+      }
+    }
+  }
+  // .banner {
+  //   .img-area {
+  //     height: 45rem;
+  //   }
+  // }
+}

@@ -1,0 +1,20 @@
+@charset "utf-8";
+@import "_variables", "_mixin";
+
+.orderedPage {
+  .tab-menu {
+    border-top: none;
+    padding: 0;
+    &__item {
+      flex: 1;
+      text-align: center;
+      &.active {
+        background-color: $black;
+        color: #fff;
+      }
+    }
+    &__text {
+      padding: 1.5rem 1rem;
+    }
+  }
+}
